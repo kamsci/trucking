@@ -1,1 +1,21 @@
-<h1>Hola el Mundo!</h1>
+<h1>Trucking Checklist</h1>
+
+<h3>Today's loads</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Progress</th>
+            <th>Title</th>
+            <th>Arrival Time</th>
+            <th>Status Notes</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Active</td>
+            <td>{{ jobs.title }}</td>
+            <td>{{ jobs.arrivalTime }}</td>
+            <td>Ready for Pickup</td>
+        </tr>
+    </tbody>
+</table>
