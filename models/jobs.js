@@ -1,9 +1,10 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
+var mongooseUniqueValidator = requpre('mongoose-unique-validator');
 
 var jobSchema = new Schema({
     title: { type: String, required: true },
-    referenceId: { type: Number, required: true },
+    referenceId: { type: Number, required: true, unique: true },
     jobComplete: { type: Boolean },
     stops: [{
         stopType: { type: String },
@@ -14,6 +15,8 @@ var jobSchema = new Schema({
         ladingComplete: { type: Boolean },
         stopComplete: { type: Boolean }
     }]
-})
+});
+
+jobSchema.plugin(mongooseUniqueValidator);
 
 module.exports = mongoose.model('Job', jobSchema);
