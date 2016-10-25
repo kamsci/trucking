@@ -10,6 +10,7 @@ var jobSchema = new Schema({
         stopType: { type: String },
         cargoDescription: { type: String },
         arrivalTime: { type: Date },
+        address: { type: String },
         picture: { type: String },
         ladingType: { type: String },
         ladingComplete: { type: Boolean },

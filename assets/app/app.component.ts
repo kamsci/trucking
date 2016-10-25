@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { Job } from './jobs/job.model';
 import { Stop } from './jobs/stop.model';
 import { JobService } from './jobs/job.service';

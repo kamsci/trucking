@@ -1,12 +1,13 @@
 export class Stop {
+    
+    public picture?: string = null;
+    public ladingReceived?: Date = null;
+    public ladingSigned?: Date = null;
 
     constructor (
-        public stopType: string,
+        public stopType: StopType,
         public cargoDescription: string,
-        public arrivalTime: Date,
-        public picture: string,
-        public ladingType: string,
-        public ladingComplete: string,
-        public stopComplete: boolean
+        public arrivalTime: string,
+        public address: string
     ) {}
 }

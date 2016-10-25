@@ -20,8 +20,15 @@ export class JobService {
                 let pickupArray: any[] = [];
                 let dropoffArray: any[] = [];
                 for(var i = 0; i < data.length; i++) {
-                    let job = new Job(data[i].title, data[i].referenceId, data[i].jobComplete);
+                    let job = new Job(data[i].title, data[i].referenceId);
                     jobArray.push(job);
+                    console.log("data", data, "length", data[0].stops.length )
+                    //     for(var k = 0; k < data[i].stops.length; k++) {
+                    //         let stop = data[i].stops[k];
+                    //         let addStop = new Stop(stop.stopType, stop.cargoDescription, stop.arrivalTime, stop.address);
+                    //         console.log("pickupStop", addStop)
+                    //         if(k = 0) { jobArray.push(addStop)}
+                    // }
                 }
                 console.log("getJobs", jobArray);
                 return jobArray;
